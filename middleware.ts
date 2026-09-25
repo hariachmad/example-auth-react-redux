@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { PUBLIC_PATH } from './global/constant/PublicPath';
-import { ROUTER_PATH } from './global/constant/RoutePath';
+import { PUBLIC_PATH } from './(global)/constant/PublicPath';
+import { ROUTER_PATH } from './(global)/constant/RoutePath';
 
 export function middleware(request: NextRequest) {
   const token = request.cookies.get('token')?.value;
