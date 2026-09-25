@@ -1,5 +1,5 @@
-import { FormEvent } from "react";
+import { FormEvent } from 'react';
 
 export type LoginFormProps = {
-    handleSubmit?: (e: FormEvent<HTMLFormElement>) => void;
+  handleSubmit?: (e: FormEvent<HTMLFormElement>) => void;
 };

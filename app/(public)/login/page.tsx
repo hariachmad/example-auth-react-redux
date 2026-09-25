@@ -1,6 +1,5 @@
-import { LoginFormSection } from "@/app/(public)/login/(section)/LoginFormSection";
-
+import LoginFormSection from "./(section)/LoginFormSection";
 
 export default function LoginPage() {
-    return <LoginFormSection/>;
+  return <LoginFormSection />;
 }

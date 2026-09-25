@@ -7,9 +7,7 @@ import { User } from '../../../type/User';
 import { FetchState } from '@/app/(modules)/shared/type/FetchState';
 import Cookies from 'js-cookie';
 
-export const loginUser = createAsyncThunk<
-  LoginPayload, Credential, RejectValue
->(
+export const loginUser = createAsyncThunk<LoginPayload, Credential, RejectValue>(
   'auth/loginUser',
   async ({ email, password }: Credential, { rejectWithValue }) => {
     await new Promise((resolve) => setTimeout(resolve, 800));
@@ -36,11 +34,7 @@ export const loginUser = createAsyncThunk<
   }
 );
 
-export const checkAuth = createAsyncThunk<
-  { user: User },
-  void,
-  RejectValue
->(
+export const checkAuth = createAsyncThunk<{ user: User }, void, RejectValue>(
   'auth/checkAuth',
   async (_, { rejectWithValue }) => {
     const token = Cookies.get('token');
@@ -88,7 +82,7 @@ const authSlice = createSlice({
       })
       .addCase(loginUser.rejected, (state, action) => {
         state.status = FetchState.Failed;
-        state.error = action.payload ?? 'Login gagal';;
+        state.error = action.payload ?? 'Login gagal';
         state.isAuthenticated = false;
       })
       .addCase(checkAuth.fulfilled, (state, action) => {

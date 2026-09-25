@@ -1,11 +1,9 @@
-"use client"
+'use client';
 
-import { useLogout } from "../hook/useLogout";
+import { useLogout } from '../hook/useLogout';
 
-export const LogoutButton = () => {
-    const { handleLogout } = useLogout();
+export default function LogoutButton() {
+  const { handleLogout } = useLogout();
 
-    return (
-        <button onClick={handleLogout}>Logout</button>
-    )
-}
+  return <button onClick={handleLogout}>Logout</button>;
+};

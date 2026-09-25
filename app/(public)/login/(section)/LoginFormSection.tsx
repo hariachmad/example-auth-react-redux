@@ -1,7 +1,5 @@
-import { LoginForm } from "../../../(modules)/auth/features/login/components/LoginForm"
+import LoginForm from "@/app/(modules)/auth/features/login/components/LoginForm";
 
-export const LoginFormSection = () => {
-    return (
-        <LoginForm/>
-    )
-}
+export default function LoginFormSection(){
+  return <LoginForm />;
+};

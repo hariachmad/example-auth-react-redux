@@ -1,4 +1,3 @@
-import { RootState } from "../../../../../../shared/context/redux/store/store";
+import { RootState } from '../../../../../../shared/context/redux/store/store';
 
-
-export const selectCurrentUser = (state : RootState) => state.auth.user;
+export const selectCurrentUser = (state: RootState) => state.auth.user;

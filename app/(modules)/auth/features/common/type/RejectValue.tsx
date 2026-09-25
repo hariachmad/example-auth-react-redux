@@ -1,3 +1,3 @@
 export type RejectValue = {
-    rejectValue: string;
+  rejectValue: string;
 };
